@@ -9,7 +9,13 @@ login flow.
 ## Install
 
 ```bash
-pip install -e /opt/projects/launtel   # or: pip install launtel
+pip install launtel
+```
+
+Or from source:
+
+```bash
+pip install -e /opt/projects/launtel
 ```
 
 Only dependencies: `requests`, `beautifulsoup4`, `dataclasses-json`.
@@ -80,7 +86,16 @@ Parsers are defensive — unknown markup yields `None`/`[]`, never exceptions.
 ## Tests
 
 ```bash
+pip install -e .            # makes the src/ package importable
 python3 -m unittest discover -s tests -v   # offline, no network
+```
+
+## Publishing (PyPI)
+
+```bash
+python3 -m build
+python3 -m twine check dist/*
+python3 -m twine upload dist/*
 ```
 
 ## GenAI Disclosure
