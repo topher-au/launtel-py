@@ -82,3 +82,8 @@ Parsers are defensive — unknown markup yields `None`/`[]`, never exceptions.
 ```bash
 python3 -m unittest discover -s tests -v   # offline, no network
 ```
+
+## GenAI Disclosure
+
+See [AI_DISCLOSURE.md](AI_DISCLOSURE.md) — this project was written
+with AI assistance (Hermes Agent) under the owner's direction.
